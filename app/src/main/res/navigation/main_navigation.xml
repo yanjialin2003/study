@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			xmlns:tools="http://schemas.android.com/tools"
+			android:id="@+id/mobile_navigation"
+			app:startDestination="@id/main_dest">
+
+	<fragment
+		android:id="@+id/main_dest"
+		android:name="com.readboy.mycustomview.jetpack.view.fragment.MainFragment"
+		android:label="fragment_main"
+		tools:layout="@layout/fragment_main" >
+		<action
+			android:id="@+id/action_main_dest_to_page_first_dest"
+			app:destination="@id/page_first_dest" />
+	</fragment>
+
+	<fragment
+		android:id="@+id/page_first_dest"
+		android:name="com.readboy.mycustomview.jetpack.view.fragment.PageFirstFragment"
+		android:label="fragment_page_first"
+		tools:layout="@layout/fragment_page_first" >
+		<action
+			android:id="@+id/action_first_dest_to_main_dest"
+			app:popUpTo="@id/main_dest" />
+		<action
+			android:id="@+id/action_first_dest_to_page_second_dest"
+			app:destination="@id/page_second_dest" />
+	</fragment>
+
+	<navigation
+		android:id="@+id/nav_graph_page_second"
+		app:startDestination="@id/page_second_dest">
+		<fragment
+			android:id="@+id/page_second_dest"
+			android:name="com.readboy.mycustomview.jetpack.view.fragment.PageSecondFragment"
+			android:label="fragment_page_second"
+			tools:layout="@layout/fragment_page_second" />
+	</navigation>
+
+</navigation>
