@@ -19,6 +19,12 @@
         <action
             android:id="@+id/action_homeFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_numberFragment"
+            app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sharedFlowFragment"
+            app:destination="@id/sharedFlowFragment" />
     </fragment>
     <fragment
         android:id="@+id/downloadFragment"
@@ -35,4 +41,14 @@
         android:name="com.readboy.flowpractice.fragment.ArticleFragment"
         android:label="fragment_article"
         tools:layout="@layout/fragment_article" />
+    <fragment
+        android:id="@+id/numberFragment"
+        android:name="com.readboy.flowpractice.fragment.NumberFragment"
+        android:label="fragment_number"
+        tools:layout="@layout/fragment_number" />
+    <fragment
+        android:id="@+id/sharedFlowFragment"
+        android:name="com.readboy.flowpractice.fragment.SharedFlowFragment"
+        android:label="fragment_shared_flow"
+        tools:layout="@layout/fragment_shared_flow" />
 </navigation>

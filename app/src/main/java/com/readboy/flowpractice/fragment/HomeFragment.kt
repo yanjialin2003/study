@@ -32,6 +32,12 @@ class HomeFragment : Fragment() {
             btnFlowAndRetrofit.setOnClickListener{
                 findNavController().navigate(R.id.action_homeFragment_to_articleFragment)
             }
+            btnStartFlow.setOnClickListener{
+                findNavController().navigate(R.id.action_homeFragment_to_numberFragment)
+            }
+            btnShareFlow.setOnClickListener{
+                findNavController().navigate(R.id.action_homeFragment_to_sharedFlowFragment)
+            }
         }
     }
 }
